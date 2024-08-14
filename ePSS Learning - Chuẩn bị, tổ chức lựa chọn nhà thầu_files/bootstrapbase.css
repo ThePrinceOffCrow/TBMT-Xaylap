@@ -1,0 +1,375 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(128, 124, 124); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #756c6c; 
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: auto; */
+}
+
+
+
+.nav-elements-wrapper {
+    cursor: pointer;
+}
+.nav-elements-wrapper:hover {
+    background-color: #fff5f5;
+}
+
+.user-info-wrapper {
+    cursor: pointer;
+}
+.user-info-wrapper:hover {
+    background-color: #f8f8f8;
+}
+
+.indicator {
+    cursor: pointer;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+.dropdown:hover {
+    background-color: rgb(254, 238, 238);
+}
+
+.bidding-arrow-content {
+    color: #0096d1;
+}
+.bidding-arrow-content:hover {
+    color: black;
+}
+
+.bell {
+    cursor: pointer;
+}
+.bell:hover {
+    background-color: rgb(253, 239, 239);
+}
+
+.arrow-content:active {
+    background-color: #71d1f7;
+}
+
+.under-menu {
+    z-index: 1; 
+    background-color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    border-right: 1px solid rgb(173, 168, 168);
+}
+
+.under-menu a {
+    color: rgb(0, 42, 255);
+}
+
+.under-menu:hover {
+    overflow-y: auto;
+}
+
+.underli {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-bottom: 1px ridge black;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 50px;
+    line-height: 25px;
+}
+
+
+.navbar {
+    --bs-navbar-padding-y: 0px;
+    z-index: 5;
+    background-color: white;
+}
+
+.navbar.navbar-expand-lg {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.iconbox .icon {
+    height: 40px;
+    width: auto;
+    margin: 0px 30px;
+    object-fit: fill;
+}
+.icon:hover {
+    cursor: pointer;
+
+}
+.iconbox {
+    border: 1px solid rgb(32, 21, 21);
+    border-top: none;
+    border-left: none;
+    align-items: center;    
+}
+
+.side-menu {
+    background-color: white;
+    /* width: 288px; */
+    height: 90vh;
+    display: block;
+    transition: all .5s ease;
+    z-index: 5;
+    /* margin-top: 52px; */
+    position: fixed;
+    padding: 0px;
+    /* overflow-y: scroll; */
+}
+
+.side-menu ul {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+} 
+.side-menu ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color: black;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(255, 255, 255, .1);
+    border-bottom: 1px solid black; 
+    transition: all .5s ease;
+    padding-left: 0;
+    margin-left: 0;
+    text-decoration: none;
+}
+.side-menu li:hover a {
+    padding-left: 2px;
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.side-menu li ul li:hover a {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.side-menu li ul ul li:hover a {
+    opacity: 100%;
+    background-color: #f7f3f3;
+    cursor: pointer;
+}
+
+.side-menu ul a i {
+    margin-right: 10px;
+}
+
+
+.user-info.col-sm-1.col-md-1.col-lg-1.col-xl-1.col-xxl-1 {
+    display: flex;
+    position: absolute;
+    width: 168px;
+    top: 0px;
+    right: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.button-container {
+    width: 80px; 
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #305680;
+    display: flex;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 37px;
+    right: 0;
+    left: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.ham-bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.toggle-button:hover {
+    cursor: pointer;
+}
+
+.toggle-button:active {
+    display: flex;
+}
+
+.main-container {
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+    /* width: 76%;
+    padding: 10px;
+    height:max-content; */
+    color: black;
+}
+
+.dauthaudientu-logo {
+  /* width: inherit; */
+  height: 72px;
+  background-color: #0096d1;
+  text-align: center;
+
+  margin-left: -1px;
+}
+
+
+.img-logo {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+ 
+}
+
+#selectRoleDlg button {
+    width: 180px;
+}
+
+
+.ui-dialog .ui-dialog-titlebar {
+    background-color: rgb(93, 93, 121);
+}
+/* @media (max-width: 768px) {
+    .popup-box {
+        display: none;
+    }
+    .popup-box.active {
+        display: block;
+    }
+    .setting-button {
+        display: flex;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 1950px) {
+    .popup-box {
+        display: none;
+    }
+    .popup-box.active {
+        display: block;
+    }
+    .setting-button {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+
+}@media (max-width: 3000px) {
+    .popup-box {
+        display: none;
+    }
+    .popup-box.active {
+        display: block;
+    }
+    .setting-button {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 1865px) {
+    .user-information {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 8vh;
+    }
+    .fullscreen {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 35vh;
+    }
+    .user-profile-picture {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 27vh;
+    }
+}
+
+@media (main-width: 900px) {
+    .user-information {
+        display: none;
+    }
+    .fullscreen {
+        display: none;
+    }
+    .user-profile-picture {
+        display: none;
+    }
+} */
+
+@media (max-width: 1199px) {
+    .main-container {
+        margin-left: 0px;
+
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .side-menu {
+        display: none; 
+    }
+}
+
+
+/* @media (min-width: 1200px) {
+    .side-menu {
+        display: block;
+        
+    }
+    .main-container {
+        margin-left: 286px;
+    }
+    
+} */
+
+

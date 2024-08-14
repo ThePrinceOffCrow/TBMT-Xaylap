@@ -1,0 +1,520 @@
+
+// $.noConflict();
+// if (typeof jQuery != 'undefined') {  
+//   // jQuery is loaded => print the version
+//   alert(jQuery.fn.jquery);
+// }
+var roleswitch = document.getElementById("roleswitch");
+var selectTag = document.getElementById("select-role");
+
+//var mySelect = [];
+var mytime = document.getElementById("currentTime");
+var mydate = document.getElementById("currentDate");
+
+setInterval(() => {
+  let d = new Date();
+  mytime.innerHTML = d.toLocaleTimeString();
+  mydate.innerHTML = d.toDateString();
+  
+})
+
+
+// setInterval (() => {
+//     let t = new Date();
+//     time.innerHTML = t.toLocaleTimeString();
+// }, 1000)
+
+// var today = new Date();
+
+//var date = today.getDate() + '/'+ today.getMonth() + '/'+ today.getFullYear();
+// var date = moment(today).format('DD/MM/YYYY');
+// document.getElementById("currentDate").innerHTML = date;
+
+var DADTPT = document.getElementById("DADTPT");
+var KHTTLCNT = document.getElementById("KHTTLCNT");
+var KHLCNT = document.getElementById("KHLCNT");
+
+var LCNTLDT = document.getElementById("LCNTLDT");
+var LCNTLDTdrop = document.getElementById("LCNTLDT-Dropdown");
+var LCNTLDTicon = document.getElementById("LCNTLDT-ICON");
+
+var LCDSNLDT = document.getElementById("LCDSN-LDT");
+var LCDSNLDTdrop = document.getElementById("LCDSN-LDT-Dropdown");
+var LCDSNLDTicon = document.getElementById("LCDSN-LDT-ICON");
+
+var TIDT = document.getElementById("TIDT")
+var TIDTdrop = document.getElementById("TIDT-Dropdown")
+var CBTCLCNT = document.getElementById('CBTCLCNT');
+var CBTCLCNTdrop = document.getElementById('CBTCLCNT-Dropdown');
+var CBTCLCNTicon = document.getElementById('CBTCLCNT-ICON');
+
+var TIDTicon = document.getElementById("TIDT-ICON")
+
+var DGHSDTLDTNT = document.getElementById("DGHSDT-LDT-NT");
+var DGHSDTLDTNTdrop = document.getElementById("DGHSDT-LDT-NT-Dropdown");
+var DGHSDTLDTNTicon = document.getElementById("DGHSDT-LDT-NT-ICON");
+var TDTLDTNT = document.getElementById("TDT-LDT-NT");
+var TDTLDTNTdrop = document.getElementById("TDT-LDT-NT-Dropdown");
+var TDTLDTNTicon = document.getElementById("TDT-LDT-NT-ICON");
+
+var TIDTLDTNT = document.getElementById("TIDT-LDT-NT");
+var TIDTLDTNTdrop = document.getElementById("TIDT-LDT-NT-Dropdown");
+var TIDTLDTNTicon = document.getElementById("TIDT-LDT-NT-ICON");
+
+
+
+
+
+var QTLCNTTVK = document.getElementById("QTLCNTTVK")
+var QTLCNTTVKdrop = document.getElementById("QTLCNTTVK-Dropdown")
+var QTLCNTTVKicon = document.getElementById("QTLCNTTVK-ICON")
+
+var LCDSN = document.getElementById("LCDSN")
+var LCDSNdrop = document.getElementById("LCDSN-Dropdown")
+var LCDSNicon = document.getElementById("LCDSN-ICON")
+
+var QTLCNTTVTT = document.getElementById("QTLCNTTVTT")
+var QTLCNTTVTTdrop = document.getElementById("QTLCNTTVTT-Dropdown")
+var QTLCNTTVTTicon = document.getElementById("QTLCNTTVTT-ICON")
+
+var Utility = document.getElementById("Utility")
+var Utilitydrop = document.getElementById("Utility-dropdown")
+var Utilityicon= document.getElementById("Utility-ICON")
+
+var QTLCNTTHD = document.getElementById("QTLCNTTHD")
+var QTLCNTTHDdrop = document.getElementById("QTLCNTTHD-Dropdown")
+var QTLCNTTHDicon = document.getElementById("QTLCNTTHD-ICON")
+
+var TDT = document.getElementById("TDT")
+var TDTdrop = document.getElementById("TDT-Dropdown")
+var TDTicon = document.getElementById("TDT-ICON")
+
+var TI = document.getElementById("TI")
+var TIdrop = document.getElementById("TI-Dropdown")
+var TIicon = document.getElementById("TI-ICON")
+
+var CNTTCDT = document.getElementById("CNTTCDT");
+var CDTBMT = document.getElementById("CĐT/BMT");
+var listtrungthau = document.getElementById("danhsachnhathaunuocngoai");
+
+LCNTLDT.addEventListener("click", function() {
+if (LCNTLDTdrop.style.display == "block") {
+  LCNTLDTdrop.style.display = "none";
+  TIDTdrop.style.display = "none";
+  LCNTLDTicon.classList.replace("fa-angle-down", "fa-angle-right");
+
+} else {
+    LCNTLDTicon.classList.replace("fa-angle-right", "fa-angle-down");
+
+    LCNTLDTdrop.style.display = "block";
+}
+});
+
+LCDSNLDT.addEventListener("click", function() {
+  if (LCDSNLDTdrop.style.display == "block") {
+    LCDSNLDTdrop.style.display = "none";
+    LCDSNLDTicon.classList.replace("fa-angle-down", "fa-angle-right");
+  
+} else {
+  LCDSNLDTicon.classList.replace("fa-angle-right", "fa-angle-down");
+  LCDSNLDTdrop.style.display = "block";
+}
+});
+
+TIDT.addEventListener("click", function() {
+    if (TIDTdrop.style.display == "block") {
+        TIDT.style.backgroundColor = "#064d69";
+        TIDTdrop.style.display = "none";
+        TIDTicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        TIDT.style.backgroundColor = "green";
+        TIDTdrop.style.display = "block";
+        TIDTicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+CBTCLCNT.addEventListener("click", function() {
+  if (CBTCLCNTdrop.style.display == "block") {
+      CBTCLCNT.style.backgroundColor = "#064d69";
+      CBTCLCNTdrop.style.display = "none";
+      CBTCLCNTicon.classList.replace("fa-angle-down", "fa-angle-right")
+  }
+  else {
+      CBTCLCNT.style.backgroundColor = "green";
+      CBTCLCNTdrop.style.display = "block";
+      CBTCLCNTicon.classList.replace("fa-angle-right", "fa-angle-down")
+  }
+});
+
+DGHSDTLDTNT.addEventListener("click", function() {
+  if (DGHSDTLDTNTdrop.style.display == "block") {
+      DGHSDTLDTNT.style.backgroundColor = "#064d69";
+      DGHSDTLDTNTdrop.style.display = "none";
+      DGHSDTLDTNTicon.classList.replace("fa-angle-down", "fa-angle-right")
+  }
+  else {
+      DGHSDTLDTNT.style.backgroundColor = "green";
+      DGHSDTLDTNTdrop.style.display = "block";
+      DGHSDTLDTNTicon.classList.replace("fa-angle-right", "fa-angle-down")
+  }
+});
+
+TDTLDTNT.addEventListener("click", function() {
+  if (TDTLDTNTdrop.style.display == "block") {
+      TDTLDTNT.style.backgroundColor = "#064d69";
+      TDTLDTNTdrop.style.display = "none";
+      TDTLDTNTicon.classList.replace("fa-angle-down", "fa-angle-right")
+  }
+  else {
+      TDTLDTNT.style.backgroundColor = "green";
+      TDTLDTNTdrop.style.display = "block";
+      TDTLDTNTicon.classList.replace("fa-angle-right", "fa-angle-down")
+  }
+});
+
+TIDTLDTNT.addEventListener("click", function() {
+  if (TIDTLDTNTdrop.style.display == "block") {
+      TIDTLDTNT.style.backgroundColor = "#064d69";
+      TIDTLDTNTdrop.style.display = "none";
+      TIDTLDTNTicon.classList.replace("fa-angle-down", "fa-angle-right")
+  }
+  else {
+      TIDTLDTNT.style.backgroundColor = "green";
+      TIDTLDTNTdrop.style.display = "block";
+      TIDTLDTNTicon.classList.replace("fa-angle-right", "fa-angle-down")
+  }
+});
+
+
+
+
+
+
+QTLCNTTVK.addEventListener("click", function() {
+    if (QTLCNTTVKdrop.style.display == "block") {
+        QTLCNTTVKdrop.style.display = "none";
+        LCDSNdrop.style.display = "none";
+        QTLCNTTVKicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        QTLCNTTVKdrop.style.display = "block";
+        QTLCNTTVKicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+LCDSN.addEventListener("click", function() {
+    if (LCDSNdrop.style.display == "block") {
+        LCDSNdrop.style.display = "none";
+        LCDSNicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        LCDSNdrop.style.display = "block";
+        LCDSNicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+QTLCNTTVTT.addEventListener("click", function() {
+    if (QTLCNTTVTTdrop.style.display == "block") {
+        QTLCNTTVTTdrop.style.display = "none";
+        Utilitydrop.style.display = "none";
+        QTLCNTTVTTicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        QTLCNTTVTTdrop.style.display = "block";
+        QTLCNTTVTTicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+Utility.addEventListener("click", function() {
+    if (Utilitydrop.style.display == "block") {
+        Utilitydrop.style.display = "none";
+        Utilityicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        Utilitydrop.style.display = "block";
+        Utilityicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+QTLCNTTHD.addEventListener("click", function() {
+    if (QTLCNTTHDdrop.style.display == "block") {
+        QTLCNTTHDdrop.style.display = "none";
+        QTLCNTTHDicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        QTLCNTTHDdrop.style.display = "block";
+        QTLCNTTHDicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+TDT.addEventListener("click", function() {
+    if (TDTdrop.style.display == "block") {
+        TDTdrop.style.display = "none";
+        TDTicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        TDTdrop.style.display = "block";
+        TDTicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+TI.addEventListener("click", function() {
+    if (TIdrop.style.display == "block") {
+        TIdrop.style.display = "none";
+        TIicon.classList.replace("fa-angle-down", "fa-angle-right")
+    }
+    else {
+        TIdrop.style.display = "block";
+        TIicon.classList.replace("fa-angle-right", "fa-angle-down")
+    }
+});
+
+
+function myHamburger() {
+  var x = document.getElementById("side-menu-id");
+  var y = window.getComputedStyle(x).display;
+
+  if (window.innerWidth < 1200) {
+      if (y == "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  }
+
+function changeRole() {
+    //mySelect = [];
+    selectTag.innerHTML = '';
+    if (userRole & 1) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(1)">Chủ đầu tư</button></div>';
+      //mySelect.push(1);l
+    }
+    if (userRole & 4) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-left: auto; margin-top: 20px; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(4)">Bên mời thầu</button></div>';
+      //mySelect.push(4);
+    }
+
+    if (userRole & 8) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(8)">Nhà thầu</button></div>';
+      //mySelect.push(8);
+    }
+    if (userRole & 16) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(16)">Nhà đầu tư</button></div>';
+      //mySelect.push(16);
+    }
+
+    if (userRole & 2) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(2)">Cơ quan có thẩm quyền</button></div>';
+      //mySelect.push(2);
+    }
+
+    if (userRole & 32) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(32)">Cơ sở đào tạo</button></div>';
+      //mySelect.push(32);
+    }
+    if (userRole & 64) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(64)">Cơ quan quản lý về đấu thầu</button></div>';
+      //mySelect.push(64);
+    }
+    if (userRole & 128) {
+      selectTag.innerHTML = selectTag.innerHTML + '<div style="margin-top: 20px; margin-left: auto; margin-right: auto;"><button class="btn btn-primary" onclick="selectRole(128)">Administrator</button></div>';
+      //mySelect.push(128);
+    }
+  //   if (typeof jQuery != 'undefined') {  
+  // // jQuery is loaded => print the version
+  //     alert(jQuery.fn.jquery);
+  //   } else {
+  //     alert('No Jquery');
+  //   }
+    //$.noConflict();
+    $("#selectRoleDlg").dialog({
+        autoOpen: false,
+        width: 850,
+        height: 380,
+        modal : true,
+        title: "Đổi vai trò"
+    });
+    $("#selectRoleDlg").dialog("open");
+
+    
+    }
+
+function selectRole(sel) {
+
+  var xhr = new XMLHttpRequest();
+  var url = '/api/changeRole/' + String(sel);
+  xhr.open('POST', url, true);
+  xhr.send(sel);
+
+  if (sel == 1) {
+    QTLCNTTHD.style.display = "none";
+    CNTTCDT.style.display = "flex";
+    CDTBMT.style.display = "flex";
+    listtrungthau.style.display = "flex";
+    DADTPT.style.display = "flex";
+    CNXNKHLCNT.style.display = "flex";
+    KHLCNT.style.display = "flex";
+    KHTTLCNT.style.display = "flex";
+    PCTKNVTHTC.style.display = "flex";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Chủ đầu tư';
+    alert('Vai trò của bạn đã được đổi thành: Chủ đầu tư.');
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'block';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'none';
+
+
+
+    selectClose();
+  }
+  if (sel == 2) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ quan có thẩm quyền'
+    alert('Vai trò của bạn đã được đổi thành: Cơ quan có thẩm quyền.');  
+    selectClose();
+  }
+  if (sel == 4) {
+    QTLCNTTHD.style.display = "block";
+    CNTTCDT.style.display = "none";
+    CDTBMT.style.display = "none";
+    DADTPT.style.display = "none";
+    CNXNKHLCNT.style.display = "flex";
+    KHLCNT.style.display = "flex";
+    KHTTLCNT.style.display = "none";
+    PCTKNVTHTC.style.display = "flex";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Bên mời thầu'
+    alert('Vai trò của bạn đã được đổi thành: Bên mời thầu.');
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'block';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'none';
+
+
+    selectClose();
+  }
+  if (sel == 8) {
+    QTLCNTTHD.style.display = "block";
+    CNTTCDT.style.display = "none";
+    CDTBMT.style.display = "none";
+    listtrungthau.style.display = "none";
+    DADTPT.style.display = "none";
+    CNXNKHLCNT.style.display = "none";
+    KHTTLCNT.style.display = 'none';
+    KHLCNT.style.display = "none";
+    PCTKNVTHTC.style.display = "none";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Nhà thầu'
+    alert('Vai trò của bạn đã được đổi thành: Nhà thầu');
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'block';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'none';
+
+    selectClose();
+  }
+  if (sel == 16) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Nhà đầu tư'
+    alert('Vai trò của bạn đã được đổi thành: Nhà đầu tư');
+    selectClose();
+  }
+  if (sel == 32) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ sở đào tạo'
+    alert('Vai trò của bạn đã được đổi thành: Cơ sở đào tạo');
+    selectClose();
+  }
+  if (sel == 64) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ quan quản lý về đấu thầu'
+    alert('Vai trò của bạn đã được đổi thành: Cơ quan quản lý về đấu thầu');
+    selectClose();
+  }
+  if (sel == 128) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Administrator'
+    alert('Vai trò của bạn đã được đổi thành: Administrator');
+    selectClose();
+  }
+  window.location.href='/newindex';  
+}
+
+function selectRole1(sel) {
+  
+  if (sel == 1) {
+    QTLCNTTHD.style.display = "none";
+    CNTTCDT.style.display = "flex";
+    CDTBMT.style.display = "flex";
+    listtrungthau.style.display = "flex";
+    DADTPT.style.display = "flex";
+    CNXNKHLCNT.style.display = "flex";
+    KHLCNT.style.display = "flex";
+    KHTTLCNT.style.display = "flex";
+
+    PCTKNVTHTC.style.display = "flex";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Chủ đầu tư';
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'block';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'none';
+
+ 
+  }
+  if (sel == 2) {
+    DADTPT.style.display = "none";
+    CNXNKHLCNT.style.display = "none";
+    CNTTCDT.style.display = "none";
+    CDTBMT.style.display = "none";
+    KHTTLCNT.style.display = "none";
+    PCTKNVTHTC.style.display = "none";
+    danhsachnhathaunuocngoai.style.display = "none";
+    QTLCNTTHD.style.display = "flex";
+    KHLCNT.style.display = "none";
+    QTLCNTTVK.style.display = "flex";
+    QTLCNTTVTT.style.display = "flex";
+    LCNTLDT.style.display = "flex"
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ quan có thẩm quyền'
+    
+  }
+  if (sel == 4) {
+    QTLCNTTHD.style.display = "block";
+    CNTTCDT.style.display = "none";
+    CDTBMT.style.display = "none";
+    DADTPT.style.display = "none";
+    CNXNKHLCNT.style.display = "flex";
+    KHTTLCNT.style.display = "none";
+    KHLCNT.style.display = "flex";
+    PCTKNVTHTC.style.display = "flex";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Bên mời thầu'
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'block';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'none';
+
+
+  }
+  if (sel == 8) {
+    QTLCNTTHD.style.display = "block";
+    CNTTCDT.style.display = "none";
+    CDTBMT.style.display = "none";
+    listtrungthau.style.display = "none";
+    DADTPT.style.display = "none";
+    CNXNKHLCNT.style.display = "none";
+    KHTTLCNT.style.display = 'none';
+    KHLCNT.style.display = "none";
+    PCTKNVTHTC.style.display = "none";
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Nhà thầu'
+    document.getElementById("LCNTLDT-Dropdown-CDTBMT").style.display = 'none';
+    document.getElementById("LCNTLDT-Dropdown-NT").style.display = 'block';
+
+   }
+  if (sel == 16) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Nhà đầu tư'
+
+  }
+  if (sel == 32) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ sở đào tạo'
+
+  }
+  if (sel == 64) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Cơ quan quản lý về đấu thầu'
+ 
+  }
+  if (sel == 128) {
+    roleswitch.innerHTML = '<i class="fa fa-users"></i> Administrator'
+ 
+  }
+  
+}
+
+
+
+function selectClose() {
+  $("#selectRoleDlg").dialog("close");
+}
